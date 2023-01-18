@@ -1,0 +1,100 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+  <head>
+    <title>Water Popup</title>
+    <style>
+      body {
+        text-align: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #hydrateImage {
+        width: 100px;
+        margin: 5px;
+      }
+
+      button {
+        margin: 5px;
+        outline: none;
+      }
+
+      button:hover {
+        outline: #80deea dotted thick;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-left: 1%;
+      }
+
+      .options:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      #commentArea {
+        margin-left: 2%;
+        width: 80%;
+      }
+
+      .comments {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-left: 1%;
+      }
+      .comments img {
+        height: 40px;
+        width: 40px;
+      }
+      .successMsg {
+        display: none;
+      }
+
+      #optionPage {
+        text-decoration: underline;
+        color: cornflowerblue;
+        cursor: pointer;
+      }
+    </style>
+    <!-- link to non-persistent background script -->
+
+    <script src="./jquery-1.10.2.js"></script>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <p>What is your experience on this site</p>
+
+    <div class="options">
+      <span> <img src="./icon/accept.png" id="acceptbtn" /> </span>
+      <span> <img src="./icon/Reject.png" id="rejectbtn" /> </span>
+    </div>
+    <div class="comments">
+      <span> <img src="./icon/Comments.png" id="commentbtn" /> </span>
+      <span><textarea id="commentArea"> </textarea></span>
+    </div>
+
+    <div class="successMsg">
+      Your Feedback is saved.. You can check your list of Feedback in
+      <span id="optionPage"> option page</span>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
